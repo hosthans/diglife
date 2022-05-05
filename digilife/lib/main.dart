@@ -46,18 +46,6 @@ class _homePageState extends State<homePage> {
     const settings(),
   ];
 
-
-
-
-
-
-
-
-
-
-
-
-
   int _counter = 0;
 
   void _incrementCounter() {
@@ -78,20 +66,29 @@ class _homePageState extends State<homePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Color.fromARGB(255, 147, 251, 255),
+        leading: IconButton(
+          icon: Icon(Icons.menu),
+          onPressed: () {  },
+
+        ),
+      ),
       bottomNavigationBar: Container(
         height: 60,
-        decoration: BoxDecoration(
-          color: Colors.grey,
-          borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(20),
-            topRight: Radius.circular(20),
-          ),
+        decoration: const BoxDecoration(
+          color: Color.fromARGB(255, 147, 251, 255),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            IconButton(onPressed: (){}, icon: const Icon(Icons.home)),
-            IconButton(onPressed: (){}, icon: const Icon(Icons.settings))
+            IconButton(onPressed: (){
+
+            }, icon: const Icon(Icons.home)),
+            IconButton(onPressed: (){
+
+            }, icon: const Icon(Icons.settings))
           ],
         ),
       ),
